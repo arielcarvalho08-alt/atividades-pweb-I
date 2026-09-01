@@ -1,8 +1,11 @@
 const express = require('express')
+const path = require('path')
 const app = express()
-const port = 3000
 
-const publicRouter = require('./routes/index')
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+const indexRouter = require('./routes/index')
 const userRouter = require('./routes/users')
 
 app.use((req, res, next) => {
@@ -10,7 +13,7 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use('/', publicRouter)
+app.use('/', indexRouter)
 app.use('/users', userRouter)
 
 app.use((req, res) => {
