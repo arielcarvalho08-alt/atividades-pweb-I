@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Formulário API - v1 e v2</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 40px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        .box { margin-bottom: 30px; padding: 15px; border-left: 4px solid #3498db; background: #f9f9f9; }
+        .box.v2 { border-left-color: #2ecc71; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { background: #3498db; color: white; border: none; padding: 10px 15px; cursor: pointer; font-size: 14px; border-radius: 4px; }
+        .box.v2 button { background: #2ecc71; }
+    </style>
+</head>
+<body>
+
+    <h1>Formulários de Teste API</h1>
+
+    <!-- FORMULÁRIO V1 -->
+    <div class="box">
+        <h3>Testar Versão 1 (v1)</h3>
+        <form action="http://localhost:8000/v1/hi" method="post">
+            <div class="form-group">
+                <label for="name1">Seu Nome:</label>
+                <input type="text" id="name1" name="name" required placeholder="Digite seu nome">
+            </div>
+            <button type="submit">Enviar Saudação v1</button>
+        </form>
+    </div>
+
+    <!-- FORMULÁRIO V2 -->
+    <div class="box v2">
+        <h3>Testar Versão 2 (v2 - Multi-idiomas)</h3>
+        <form action="http://localhost:8000/v2/hi" method="post">
+            <div class="form-group">
+                <label for="name2">Seu Nome:</label>
+                <input type="text" id="name2" name="name" required placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+                <label for="lang">Escolha o Idioma:</label>
+                <select id="lang" name="lang">
+                    <option value="pt-br">Português (pt-br)</option>
+                    <option value="en">Inglês (en)</option>
+                    <option value="es">Espanhol (es)</option>
+                </select>
+            </div>
+            <button type="submit">Enviar Saudação v2</button>
+        </form>
+    </div>
+
+</body>
+</html>
