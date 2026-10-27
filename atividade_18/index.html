@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASA APOD com Axios e npm init</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <h1>🌌 Buscador de Astros (NASA APOD)</h1>
+    
+    <div class="search-box">
+      <input type="text" id="inputAstro" placeholder="Digite o astro em inglês (Ex: Mars, Nebula, M83)" />
+      <button id="btnBuscar">Buscar Imagens</button>
+    </div>
+
+    <div class="carousel-container" id="carouselContainer">
+      <div class="carousel-track" id="carouselTrack"></div>
+      <button class="nav-btn prev" id="btnAnterior">❮</button>
+      <button class="nav-btn next" id="btnProximo">❯</button>
+    </div>
+    
+    <p id="statusMessage"></p>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
