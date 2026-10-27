@@ -12,4 +12,4 @@ Este diretório contém o desenvolvimento da Atividade 06 para a disciplina de P
 4. Redirecionamento: Uso de `res.redirect()` para direcionar usuários sem `userid` para a página de signup.
 5. Tratamento de Erro 404: Configuração de captura para rotas não encontradas utilizando `res.status(404)` com link de retorno para o index.
 
-Para instruções detalhadas de como instalar as dependências e rodar o servidor, consulte o arquivo `package.json`.
+Para executar o servidor, certifique-se de ter o Node.js e o Express instalados e execute o arquivo via terminal com o comando: `node app.js`.
